@@ -315,14 +315,14 @@ const temples = [
     location: "Rome, Italy",
     dedicated: "2019, June, 9",
     area: 42000,
-    imageUrl: "images/Rome-Italy-Temple.jpeg"
+    imageUrl: "images/Rome-Italy-Temple.jpg"
   },
   {
     templeName: "Paris France Temple",
     location: "Le Chesnay, France",
     dedicated: "2017, May, 21",
     area: 12000,
-    imageUrl: "images/Paris-France-Temple.jpeg"
+    imageUrl: "images/Paris-France-Temple.jpg"
   },
   {
     templeName: "Lagos Nigeria Temple",
@@ -336,14 +336,14 @@ const temples = [
     location: "Sydney, Australia",
     dedicated: "2000, June, 18",
     area: 30000,
-    imageUrl: "images/The-Sydney-Australia-LDS-temple.jpeg"
+    imageUrl: "images/The-Sydney-Australia-LDS-temple.jpg"
   },
   {
     templeName: "Kyiv Ukraine Temple",
     location: "Kyiv, Ukraine",
     dedicated: "2010, August, 5",
     area: 16000,
-    imageUrl: "images/Kiev-Temple.jpeg"
+    imageUrl: "images/Kiev-Temple.jpg"
   },
   // three additional temples from CDN (absolute URLs) - you may replace with local optimized images
   {
