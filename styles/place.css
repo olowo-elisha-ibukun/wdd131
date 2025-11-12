@@ -1,0 +1,164 @@
+:root {
+    /* Updated to Nigeria's colors: Green and White */
+    --green: #008751ff;  /* Dark Green from Nigeria flag */
+    --white: #ffffff;    /* White from Nigeria flag */
+    --black: #000000;    /* Black for table text */
+    --separator-line: #008751ff; /* Red line as seen in the image */
+
+    /* Font settings */
+    --poppins-regular: "Poppins", sans-serif;
+    --poppins-regular-weight: 400;
+
+    /* Color assignments */
+    --header-background: var(--green);
+    --header-text: var(--white);
+    --section-background: var(--white);
+    --section-text: var(--black); /* Black text for tables */
+    --footer-background: var(--green);
+    --footer-text: var(--white);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--poppins-regular);
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--header-text);
+    text-align: center; /* Center the header */
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    color: var(--section-text);
+}
+
+/* Hide SVG icon beside title */
+.box-title .weather-icon {
+    display: none; /* Ensure no SVG icon beside title */
+}
+
+table {
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
+    color: var(--section-text); /* Black text for tables */
+}
+
+.weather table {
+    padding: 25px 0;
+}
+
+td {
+    padding: 5px 5px;
+}
+
+td.label {
+    text-align: right;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--header-background);
+    color: var(--header-text);
+    padding: 20px;
+    width: 100%;
+}
+
+.hero-section {
+    width: 100%;
+    background-color: var(--section-background);
+    padding-top: 20px;
+    position: relative;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--separator-line); /* Red line below image */
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    mask-image: linear-gradient(var(--green) 95%, transparent);
+}
+
+.data, .weather {
+    padding-top: 25px;
+    background-color: var(--section-background);
+    width: 100%;
+}
+
+.data {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.data::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ced4da; /* Faint line between data and weather */
+    opacity: 0.5; /* Faint effect */
+}
+
+.weather {
+    margin-bottom: 50px;
+}
+
+/* Weather icon below title in mobile view */
+.weather-icon-mobile {
+    display: block; /* Stack below title */
+    width: 15%; /* Adjust size */
+    margin: 10px auto 0 auto; /* Center and space below title */
+}
+
+.weather img {
+    width: 15%;
+    height: auto;
+}
+
+footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text);
+    padding: 25px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+footer a {
+    color: var(--footer-text);
+}
+
+footer #currentyear,
+footer #lastModified {
+    font-size: 1.2rem;   /* make it larger */
+    font-weight: 600;  /* bolder for better contrast */
+}
