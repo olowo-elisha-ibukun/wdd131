@@ -165,8 +165,15 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const currentYear = new Date().getFullYear();
     const lastModified = document.lastModified;
+
     const copyrightYearElement = document.getElementById('currentyear');
     const lastModifiedElement = document.getElementById('lastModified');
-    copyrightYearElement.textContent = currentYear;
-    lastModifiedElement.textContent = Last Modification: ${lastModified};
+
+    if (copyrightYearElement) {
+        copyrightYearElement.textContent = currentYear;
+    }
+
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = `Last Modification: ${lastModified}`;
+    }
 });
