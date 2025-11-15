@@ -1,0 +1,38 @@
+/* Tablet: >=720px */
+@media (min-width: 720px) {
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+    position: static;
+    background: transparent;
+    width: auto;
+    justify-content: flex-start; /* spread links */
+  }
+  .menu-toggle { display: none; }
+
+  .hero {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    text-align: left;
+    padding: 2rem;
+  }
+  .profile-pic { width: 160px; height: 160px; margin: 0; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+
+/* Desktop: >=1024px */
+@media (min-width: 1024px) {
+  header { padding: 1.25rem 3rem; }
+  nav ul { gap: 3rem; }
+
+  .projects-grid { grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+  .project-card img { height: 220px; object-fit: cover; }
+  .page-title h1 { font-size: 2.5rem; }
+  .page-title p { font-size: 1.2rem; }
+
+  .hero h1 { font-size: 2.2rem; }
+  .tagline { font-size: 1.2rem; }
+  .profile-pic { width: 200px; height: 200px; }
+}
