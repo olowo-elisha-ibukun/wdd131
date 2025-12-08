@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Personal portfolio website showcasing projects in web development and electrical engineering by Olowo Ibukun Elisha.">
+  <meta name="description" content="Projects by Olowo Ibukun Elisha — web development and electrical/electronics projects.">
   <meta name="author" content="Olowo Ibukun Elisha">
-  <title>ElectroTech by Elisha | Home</title>
+  <title>ElectroTech by Elisha | Projects</title>
 
   <link rel="stylesheet" href="styles/project.css">
   <link rel="stylesheet" href="styles/project-large.css">
@@ -21,46 +21,51 @@
 
     <nav id="nav-menu" aria-label="Primary navigation">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Theme toggle (before hamburger) -->
     <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
       <i class="fas fa-moon" aria-hidden="true"></i>
     </button>
 
-    <!-- Hamburger (far right) -->
     <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
   </header>
 
   <main>
-    <section class="hero container">
-      <img src="images/profile-picture.jpg" alt="Profile picture of Olowo Ibukun Elisha" class="profile-pic" loading="lazy">
-      <div class="hero-text">
-        <h1>Olowow Ibukun Elisha</h1>
-        <p class="tagline">Web Developer & Electrical/Electronics Enthusiast</p>
-        <a class="btn" href="projects.html">View My Projects</a>
-      </div>
+    <section class="page-title container">
+      <h1>Projects</h1>
+      <p>Selected projects from my web development and electrical/electronics work.</p>
     </section>
 
-    <section class="about container">
-      <h2>About Me</h2>
-      <div class="about-box">
-        <p>
-          Hi — I am <strong>Olowo Ibukun Elisha/strong>. I am a dedicated Web Developer with a background in
-          Electrical & Electronics Engineering. I combine technical rigor with clean, accessible design to build
-          responsive websites and practical engineering projects.
-        </p>
-        <p>
-          I enjoy solving real problems, learning new tools, and creating solutions that are useful and well-designed.
-          This portfolio highlights projects demonstrating my web development and electrical work.
-        </p>
-      </div>
+    <section class="projects-grid container" aria-live="polite">
+      <article id="rafting" class="project-card">
+        <img src="images/rafting-project.webp" alt="Rafting project screenshot" loading="lazy">
+        <h2>Rafting Website</h2>
+        <p>A responsive site built with HTML and CSS for rafting adventures.</p>
+      </article>
+
+      <article id="portfolio" class="project-card">
+        <img src="images/portfolio-project.webp" alt="Portfolio project screenshot" loading="lazy">
+        <h2>Portfolio Website</h2>
+        <p>My personal portfolio site built with HTML, CSS, and JavaScript.</p>
+      </article>
+
+      <article id="solar" class="project-card">
+        <img src="images/solar-project.webp" alt="Solar installation project" loading="lazy">
+        <h2>Solar Installation</h2>
+        <p>A home-based solar installation project for sustainable power.</p>
+      </article>
+
+      <article id="code" class="project-card">
+        <img src="images/code-project.webp" alt="Code project screenshot" loading="lazy">
+        <h2>Code Sample</h2>
+        <p>Example of clean, structured HTML and CSS from coursework.</p>
+      </article>
     </section>
   </main>
 

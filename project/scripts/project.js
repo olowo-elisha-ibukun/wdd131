@@ -64,7 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (themeBtn) {
     themeBtn.addEventListener("click", () => {
-      applyTheme(document.body.classList.contains("dark-mode") ? "light" : "dark");
+      applyTheme(
+        document.body.classList.contains("dark-mode") ? "light" : "dark"
+      );
     });
   }
 
@@ -94,10 +96,12 @@ document.addEventListener("DOMContentLoaded", () => {
       stored.push(entry);
       localStorage.setItem("messages", JSON.stringify(stored));
 
+      // ✅ FIXED TEMPLATE STRING
       if (feedback) {
-        feedback.innerHTML = <p style="color:green;">✅ Thanks ${name}! Message saved locally at ${new Date().toLocaleString()}.</p>;
+        feedback.innerHTML = `<p style="color:green;">✅ Thanks ${name}! Message saved locally at ${new Date().toLocaleString()}.</p>`;
       } else {
-        alert(Thanks ${name}! Message saved locally.);
+        // ✅ FIXED ALERT STRING
+        alert(`Thanks ${name}! Message saved locally.`);
       }
 
       contactForm.reset();
@@ -109,7 +113,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const lastModifiedEl = document.getElementById("lastModified");
-  if (lastModifiedEl) lastModifiedEl.textContent = Last Modified: ${document.lastModified};
+  if (lastModifiedEl) {
+    // ✅ FIXED TEMPLATE STRING
+    lastModifiedEl.textContent = `Last Modified: ${document.lastModified}`;
+  }
 
   /* ---------- OPTIONAL: Projects count ---------- */
   const projectCards = $$(".project-card");
@@ -118,7 +125,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageTitle = $(".page-title");
     if (pageTitle) {
       const countEl = document.createElement("p");
-      countEl.textContent = Showing ${projectCards.length} projects.;
+
+      // ✅ FIXED TEMPLATE STRING
+      countEl.textContent = `Showing ${projectCards.length} projects.`;
+
       countEl.style.fontWeight = "700";
       countEl.style.marginTop = ".5rem";
       pageTitle.appendChild(countEl);
